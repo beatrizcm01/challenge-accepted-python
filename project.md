@@ -1,6 +1,6 @@
 # Recruiting Process - Data Engineer Jr (Python Challenge)
 
-To approach this multidimensional data I chose to work with the Xarray library because it's very efficient to work with multidimensional data such as the one in this challenge.
+To approach this challenge I chose to work with the Xarray library because it's very efficient to work with labelled multidimensional data such as the one in this challenge.
 ## Initial Steps
 
 Proceed by cloning or forking my repository. Then, make sure to have the requirements installed as instructed below.
@@ -29,7 +29,9 @@ They are both multidimensional data arrays containing three attributes (latitude
 
 ### Data Transformation
 
-Some data transformation was performed with the datasets to rename attributes, dimensions, convert unities and replace values in order to calculate the RMSE index. The results for the RMSE index calculated for every six hours are stored in the rmse_results.nc file. 
+Some data transformation was performed with the datasets to rename attributes, dimensions, convert unities and replace values in order to calculate the RMSE index. One important note is that, because I noticed that not all correspondent latitudes and longitudes were exactly the same in the forecast and observation datasets, I considered the true coordinates to be the ones present in observation.nc. This point is also ellaborated in the Jupyter Notebook.
+
+The results for the RMSE index calculated for every six hours are stored in the rmse.nc file. 
 
 ### Data Visualization
-The data visualization was performed with Matplotlib and Seaborn. I presented the two-dimensional maps for the RMSE index for the given time period, where the coordinates are the latitude and longitude. I also presented the RMSE in São Paulo for each given period with a bar plot and a line graph of RMSE through time both for the period of 6h and for the RMSE calculated hourly.
+The data visualization was performed with Matplotlib and Seaborn. I presented the two-dimensional heat maps for the RMSE index for the given time period, where the coordinates are the latitude and longitude. I also presented the RMSE in São Paulo for each given period with a bar plot and a line graph of RMSE through time both for the period of 6h and for the RMSE calculated hourly.
